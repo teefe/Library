@@ -16,17 +16,18 @@
         <h1></h1>
         <button class="log-btn">Log in</button>
     </header>
-    <div>
+    <div class="mid-btn">
         <button class="add-btn">+Add book</button>
     </div>
     <form action="">
         <h4>add new book</h4>
-        <label for="tittle">title</label>
-        <input type="text" id="title">
-        <label for="author">author</label>
-        <input type="text" id="author">
-        <label for="pages">Pages</label>
-        <input type="text" id="pages">
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="author" placeholder="Author">
+        <input type="number" id="pages" placeholder="Pages">
+        <section class="Read">
+            <label for="Read">Have you read it?</label>
+            <input type="checkbox" id="Read">
+        </section>
         <button>Submit</button>
     </form>
     <script src="library.js"></script>
