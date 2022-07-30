@@ -30,7 +30,7 @@ button{
     background-color: #111827;
     color: #f9fafb;
     width: 150px;
-    z-index: 1;
+    
 }
 .add-btn:hover{
     background-color:#4b5563;
@@ -55,7 +55,7 @@ form{
     width: 290px;
     height: 350px;
     border-radius: 10px;
-    opacity: 0;
+    
 
 }
 input{
@@ -88,4 +88,11 @@ label{
 #Read{
     width: 20px;
     
+}
+.form-btn{
+    background-color: #d1d5db;
+    width: 250px;
+}
+.form-btn:hover{
+    background-color: #9ca3af;
 }
