@@ -1,3 +1,4 @@
+// The operation variables
 let myLibrary = [];
 let newTitle;
 let newAuthor;
@@ -9,8 +10,8 @@ const author = document.getElementById('author');
 const pages = document.getElementById('pages');
 const read = document.getElementById('Read');
 const BTN = document.getElementById('BTN');
-const myForm = document.querySelector('.form') 
 
+// The object constructor
 function Book(title,author,pages,read){
     this.title = title
     this.author = author
@@ -25,8 +26,9 @@ function addBookToLibrary() {
     console.log(theBook)
 }
 
-BTN.addEventListener('onclick',()=>{
+BTN.addEventListener('click',()=>{
     addBookToLibrary()
+    hideForm()
 })
 
 tittle.addEventListener('change',()=>{
@@ -42,7 +44,6 @@ author.addEventListener('change',()=>{
 pages.addEventListener('change',()=>{
     newPages = pages.value;
     theBook.pages = newPages;
-    console.log(theBook)
 })
 read.addEventListener('change',()=>{
     newRead = read.checked;
@@ -51,11 +52,17 @@ read.addEventListener('change',()=>{
 })
 
 const addBtn = document.querySelector('.add-btn')
+const myForm = document.querySelector('.form')
 
-addBtn.addEventListener('click',()=>{
-    myForm.style.opacity = 1;
-    alert('uyhgenbdshxghYTGHEDSICUJHS')
-})
-
-function formShow() {
+function showForm() {
+    myForm.style.cssText = 'opacity: 1; z-index:1'
+    addBtn.style.cssText = 'opacity: 0; z-index:0'
 }
+function hideForm(){
+    myForm.style.cssText = 'opacity: 0; z-index:0'
+    addBtn.style.cssText = 'opacity: 1; z-index:1'
+
+}
+addBtn.addEventListener('click',()=>{
+    showForm()
+})
