@@ -56,7 +56,7 @@ const myForm = document.querySelector('.form')
 
 function showForm() {
     myForm.style.cssText = 'opacity: 1; z-index:1'
-    addBtn.style.cssText = 'opacity: 0; z-index:0'
+    addBtn.style.cssText = 'opacity: 0; z-index:0; backdrop-filter: blur(5px);'
 }
 function hideForm(){
     myForm.style.cssText = 'opacity: 0; z-index:0'
