@@ -20,37 +20,35 @@ function Book(title,author,pages,read){
     this.read = read
 }
 
-const theBook = new Book(newTitle,newAuthor,newPages,newRead)
-
-function addBookToLibrary() {
+function addBookToLibrary(Title,Author,Pages,Read) {
+const theBook = new Book(Title,Author,Pages,Read)
     myLibrary.push(theBook)
-    console.log(theBook)
+    console.log(myLibrary)
 }
 
 BTN.addEventListener('click',()=>{
-    addBookToLibrary()
+    addBookToLibrary(newTitle,newAuthor,newPages,newRead)
     hideForm()
     showCard()
 })
 
 tittle.addEventListener('change',()=>{
     newTitle = tittle.value;
-    theBook.title = newTitle;
+    // theBook.title = newTitle;
 })
 
 author.addEventListener('change',()=>{
     newAuthor = author.value;
-    theBook.author = newAuthor;
+    // theBook.author = newAuthor;
 })
 
 pages.addEventListener('change',()=>{
     newPages = pages.value;
-    theBook.pages = newPages;
+    // theBook.pages = newPages;
 })
 read.addEventListener('change',()=>{
     newRead = read.checked;
-    theBook.read = newRead;
-    console.log(theBook)
+    // theBook.read = newRead;
 })
 
 const addBtn = document.querySelector('.add-btn')
@@ -63,6 +61,7 @@ function showForm() {
 function hideForm(){
     myForm.style.cssText = 'opacity: 0; z-index:0'
     addBtn.style.cssText = 'opacity: 1; z-index:1'
+    
    
 }
 
@@ -73,4 +72,18 @@ function showCard(){
 
 addBtn.addEventListener('click',()=>{
     showForm()
+    formReset()
 })
+
+function formReset() {
+    tittle.value = "";
+    author.value = "";
+    pages.value = "";
+    read.value = "";
+}
+function varReset(){
+    newTitle = "";
+    newAuthor = "";
+    newPages = "";
+    newRead = "";
+}
