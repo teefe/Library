@@ -19,10 +19,10 @@ function Book(title,author,pages,read){
     this.pages = pages
     this.read = read
 }
-
 const theBook = new Book(newTitle,newAuthor,newPages,newRead)
 
 function addBookToLibrary() {
+
     myLibrary.push(theBook)
     console.log(theBook)
 }
@@ -50,7 +50,6 @@ pages.addEventListener('change',()=>{
 read.addEventListener('change',()=>{
     newRead = read.checked;
     theBook.read = newRead;
-    console.log(theBook)
 })
 
 const addBtn = document.querySelector('.add-btn')
