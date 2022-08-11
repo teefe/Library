@@ -28,6 +28,7 @@ const theBook = new Book(Title,Author,Pages,Read)
 
 BTN.addEventListener('click',()=>{
     addBookToLibrary(newTitle,newAuthor,newPages,newRead)
+    cardUpdate()
     hideForm()
     showCard()
 })
@@ -53,6 +54,7 @@ read.addEventListener('change',()=>{
 
 const addBtn = document.querySelector('.add-btn')
 const myForm = document.querySelector('.form')
+const bookTittle = document.querySelector('.Book-Tittle')
 
 function showForm() {
     myForm.style.cssText = 'opacity: 1; z-index:1;'
@@ -81,9 +83,14 @@ function formReset() {
     pages.value = "";
     read.value = "";
 }
-function varReset(){
-    newTitle = "";
-    newAuthor = "";
-    newPages = "";
-    newRead = "";
+
+function cardUpdate(){
+    let title = myLibrary.Book.Title;
+    bookTittle.textContent = title;
 }
+// function varReset(){
+//     newTitle = "";
+//     newAuthor = "";
+//     newPages = "";
+//     newRead = "";
+// }
