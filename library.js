@@ -55,6 +55,8 @@ read.addEventListener('change',()=>{
 const addBtn = document.querySelector('.add-btn')
 const myForm = document.querySelector('.form')
 const bookTittle = document.querySelector('.Book-Tittle')
+const bookAuthor = document.querySelector('.Book-Author')
+const bookpages = document.querySelector('.number-pages')
 
 function showForm() {
     myForm.style.cssText = 'opacity: 1; z-index:1;'
@@ -85,8 +87,12 @@ function formReset() {
 }
 
 function cardUpdate(){
-    let title = myLibrary.Book.Title;
-    bookTittle.textContent = title;
+    let newtitle = myLibrary[0];
+    bookTittle.textContent = newtitle.title;
+    bookAuthor.textContent = newtitle.author;
+    bookpages.textContent = newtitle.pages;
+
+
 }
 // function varReset(){
 //     newTitle = "";
