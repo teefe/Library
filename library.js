@@ -48,7 +48,14 @@ pages.addEventListener('change',()=>{
     // theBook.pages = newPages;
 })
 read.addEventListener('change',()=>{
-    newRead = read.checked;
+    if (read.checked === undefined || false){
+        newRead = false;
+        alert('BOOK NOT YET READ')
+    }
+    if(read.checked ===true){
+        newRead = read.checked;
+        alert('BOOK WAS READ')
+    }
     // theBook.read = newRead;
 })
 
