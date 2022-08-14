@@ -11,6 +11,7 @@ const pages = document.getElementById('pages');
 const read = document.getElementById('Read');
 const BTN = document.getElementById('BTN');
 const BookCard = document.querySelector('.Book-card')
+const ReadBtn = document.querySelector('.ReadBtn')
 
 // The object constructor
 function Book(title,author,pages,read){
@@ -50,11 +51,10 @@ pages.addEventListener('change',()=>{
 read.addEventListener('change',()=>{
     if (read.checked === undefined || false){
         newRead = false;
-        alert('BOOK NOT YET READ')
     }
     if(read.checked ===true){
         newRead = read.checked;
-        alert('BOOK WAS READ')
+        ReadBtn.style.cssText = 'background-color:green'
     }
     // theBook.read = newRead;
 })

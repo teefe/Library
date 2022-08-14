@@ -123,6 +123,8 @@ label{
 }
 .ReadBtn{
     width: 250px;
+    background-color: red;
+    color: whitesmoke;
 }
 .RemoveBtn{
     width: 250px; 
